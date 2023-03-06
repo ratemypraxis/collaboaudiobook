@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://pagecdn.io/lib/easyfonts/space-mono.css" rel="stylesheet" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			Chit-Chat
+		</title>
+
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="audioRec.js"></script>
+		<script type="text/javascript">
+
+		
+var socket = io.connect();
+			
+			socket.on('connect', function() {
+				console.log("Connected " + socket.id);
+			});
+
+			// Receive from any event \
+			socket.on('chatmessage', function (data) {
+				console.log(data);
+				//document.getElementById('messages').innerHTML = data + document.getElementById('messages').innerHTML;
+
+                let newmessage = document.createElement("DIV");
+                newmessage.innerHTML = data;
+                //newmessage.style
+                
+                document.getElementById('messages').appendChild(newmessage);
+
+			});
+
+            socket.on('named', function(data) {
+                console.log("Got user name " + data);
+            });
+			
+			var sendmessage = function(message) {
+				console.log("chatmessage " + message);
+				socket.emit('chatmessage', message);
+
+			};
+
+
+			var setname = function(data) {
+				console.log("usernames " + data);
+				socket.emit('named', data + ' said ');
+
+			};
+
+
+	
+		</script>	
+
+
+	</head>
+	<h1 id="intro">Live Collabo Audiobook</h1>
+<div class="row">
+	<div class="column" id='chatZone'>
+<div id="chatbank">
+	<br>
+	<br>
+
+	<text id="newUser"></text>
+	<br>
+
+	<text id="bye"></text><br>
+
+<br>
+<text>
+ <span id="messages"></span><br>
+ <span id="new"></span><br>
+ <span id="byebye"></span><br>
+
+</text>
+ <br>
+
+</div>
+
+<div>
+	<br>
+	<text id="login">
+		<input type="text" id="username" name="username">
+		<input type="submit" value="confirm name" onclick="setname(document.getElementById('username').value);">
+		</text>
+		<br>
+ <text id="chat">
+ <input type="text" id="message" name="message">
+ <input type="submit" value="chit chat" onclick="sendmessage(document.getElementById('message').value);">
+ </text>
+
+</div>
+</div>
+
+<div class="column" id="audioZone">
+<h2> Audio Zone</h2>
+<br>
+<p><button id="record">Record Sentence ⏺️</button></p>
+<br>
+<span>
+<h3> Our Story </h3>
+<div id="sound-clip"></div>
+</span>
+</div>
+</div>
+<script
+src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+
+
+ <br>
+ <br>
+</div>
+ </body>
+</html>
