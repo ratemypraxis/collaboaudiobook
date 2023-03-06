@@ -1,0 +1,186 @@
+/* //<link href="https://pagecdn.io/lib/easyfonts/space-mono.css" rel="stylesheet" /> */
+
+@font-face {
+    font-family: space-mono;
+    src: url(https://pagecdn.io/lib/easyfonts/space-mono.css);
+  }
+
+  body{
+    font-family: "monaco", monospace;
+    background-image: url("waveSound.png"); 
+    background-size: 150px;
+  background-repeat: repeat;
+  }
+
+#chat{
+    background-color: #aaeed4;
+    border-width:1px; 
+    border-style:solid; 
+    border-color:#527f6e; 
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+
+}
+
+#login{
+    background-color: #aadaee;
+    border-width:1px; 
+    border-style:solid; 
+    border-color:#527f6e; 
+    border-radius: 5px;
+    padding: 5px;
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+}
+
+#messages{
+    background-color: rgb(170, 202, 238);
+    border-width:1px; 
+    border-style:solid; 
+    border-color:#1100ff; 
+    border-radius: 25px;
+    padding: 5px; 
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+
+}
+
+#new{
+    /* background-color: rgb(170, 202, 238); */
+    /* border-width:1px; 
+    border-style:solid; 
+    border-color:#1100ff; 
+    border-radius: 25px; */
+    padding: 5px; 
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+#byebye{
+    /* background-color: rgb(170, 202, 238); */
+    /* border-width:1px; 
+    border-style:solid; 
+    border-color:#1100ff; 
+    border-radius: 25px; */
+    padding: 5px; 
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+#record{
+    /* background-color: #eeaaaa;
+    border-width:1px; 
+    border-style:solid; 
+    border-color:#7f5252; 
+    border-radius: 25px;*/
+    padding: 10px; 
+    justify-content: center;
+    display: flex;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+#chatbank{
+    background-color: rgb(238, 170, 223);
+    
+    border-radius: 25px; 
+    padding: 42px; 
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+#audioZone{
+
+    float: right;
+    margin-right: 42px;
+
+    background-color: rgb(238, 170, 223);
+    border-width:5px; 
+    border-style:solid; 
+    border-color:#1100ff; 
+    border-radius: 20px; 
+    padding: 10px; 
+    text-align: center;
+    justify-content: center;
+    box-shadow: 10px 10px;
+}
+
+#intro{
+    text-align: center;  
+    color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;  
+    background-color: rgb(238, 170, 223);
+    border-style:solid; 
+    border-color:#1100ff; 
+    border-radius: 10px; 
+    border-width: 5px;
+    padding: 5px;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+/* //float: left; */
+width: 35%;
+
+}
+
+#chatZone{
+    float: left;
+    margin-left: 30px;
+    box-shadow: 10px 10px;
+    background-color: rgb(238, 170, 223);
+    border-width:5px; 
+    border-style:solid; 
+    border-color:#1100ff; 
+    border-radius: 20px; 
+    padding: 1px; 
+    text-align: center;
+    justify-content: center;
+}
+
+* {
+box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    column-gap: 40px;
+    stroke-width: 5pt;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    margin: auto;
+/* //float: left; */
+width: 45%;
+padding: 20px;
+text-align: center;
+/* height: 300px; Should be removed. Only for demonstration */
+/* justify-content: center;
+    display: flex;
+    font-size: 20px; */
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+background-color: #eeaada;
+}
